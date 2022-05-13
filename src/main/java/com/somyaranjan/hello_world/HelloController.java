@@ -19,7 +19,13 @@ public class HelloController {
     public String listAll(Model model){
         List<User> listUsers = repo.findAll();
         model.addAttribute("listUsers", listUsers);
-        return "a";
+        return "Users";
+    }
+
+    @GetMapping("/data")
+    public List<User> getAllNotes()
+    {
+        return repo.findAll();
     }
 }
 

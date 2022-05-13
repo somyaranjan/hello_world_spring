@@ -19,9 +19,8 @@ public class HelloWorldApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		String insert = "INSERT INTO test (name, age) VALUES (?, ?)";
-		String view = "SELECT * FROM test";
-		int result = jdbcTemplate.update(insert, "Soffgfg", 24);
+		String insert = "INSERT INTO test (id, name, age) VALUES (?, ?, ?)";
+		int result = jdbcTemplate.update(insert,8, "duujsfh", 94);
 		if(result >0) {
 			System.out.println("data inserted");
 		}
